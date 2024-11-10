@@ -58,9 +58,14 @@ int main() {
  
         cout << "Initial balance: $" << myAccount.getBalance() << endl;
  
-        myAccount.deposit(50);
+        myAccount.deposit(60);
+
+        cout << "Current balance: $" << myAccount.getBalance() << endl;
+
         processWithdrawal(myAccount, 200);  // Will throw InsufficientFunds
- 
+
+        cout << "Current balance: $" << myAccount.getBalance() << endl;
+
     } catch (const InsufficientFunds& e) {
         cout << e.what() << endl;
     } catch (const NegativeDeposit& e) {
